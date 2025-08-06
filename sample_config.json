@@ -1,0 +1,56 @@
+{
+  "websites": [
+    {
+      "name": "example_news",
+      "url": "https://example.com/news",
+      "type": "news",
+      "selectors": {
+        "title": ".news-title",
+        "content": ".news-content"
+      },
+      "schedule": "*/30",
+      "enabled": false,
+      "use_selenium": false,
+      "description": "예시 뉴스 사이트"
+    },
+    {
+      "name": "example_shopping",
+      "url": "https://example.com/products",
+      "type": "shopping", 
+      "selectors": {
+        "title": ".product-name",
+        "price": ".price"
+      },
+      "schedule": "*/60",
+      "enabled": false,
+      "use_selenium": false,
+      "description": "예시 쇼핑 사이트"
+    }
+  ],
+  "general_settings": {
+    "user_agent": "Advanced Web Scraper 1.0",
+    "timeout": 10,
+    "max_retries": 3,
+    "delay_between_requests": 1,
+    "max_workers": 5
+  },
+  "notifications": {
+    "email": {
+      "enabled": false,
+      "smtp_server": "smtp.gmail.com",
+      "smtp_port": 587,
+      "smtp_user": "your-email@gmail.com",
+      "smtp_password": "your-app-password",
+      "to_email": "recipient@example.com"
+    },
+    "webhook": {
+      "enabled": false,
+      "url": "https://hooks.example.com/webhook"
+    }
+  },
+  "export_settings": {
+    "excel_export": true,
+    "export_schedule": "daily",
+    "max_records_per_file": 10000
+  }
+}
